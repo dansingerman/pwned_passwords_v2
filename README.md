@@ -35,9 +35,9 @@ Or install it yourself as:
     You can find out the number of times a password has appeared in Troy Hunt's Pwned Passwords V2 dataset as follows.
 
 ``` >  PwnedPasswordsV2.have_i?('password')
-    => 3303003
-    >  PwnedPasswordsV2.have_i?('a_nice_strong_password+%^&*()__*')
-    => 0
+=> 3303003
+>  PwnedPasswordsV2.have_i?('a_nice_strong_password+%^&*()__*')
+=> 0
 ```
 
 2.0.0-p643 :007 >
