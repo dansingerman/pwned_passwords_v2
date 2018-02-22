@@ -8,7 +8,7 @@ See https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/ for mo
 
 The code is kept deliberately simple so you can eyeball what is going on.
 
-The passwords you use in this gem do not get sent externally. The password is sha1 hashed, and then only the first 5 characters are sent externally.
+The passwords you use in this gem do not get sent externally. The password is sha1 hashed, and then only the first 5 characters are sent externally. The API response is then checked locally to see if a matching SHA1 hash is present.
 
 Troy Hunt's [blog post](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/) explains this process in more detail.
 
