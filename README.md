@@ -1,6 +1,6 @@
 # PwnedPasswordsV2
 
-This gem is a simple wrapper to Troy Hunt's https://api.pwnedpasswords.com service to check if a password has been found in a data breach.
+This gem is a simple wrapper to Troy Hunt's Have I Been Pwned API at https://api.pwnedpasswords.com, to check if a password has been found in a data breach.
 
 See https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/ for more details.
 
@@ -10,7 +10,9 @@ The code is kept deliberately simple so you can eyeball what is going on.
 
 The passwords you use in this gem do not get sent externally. The password is SHA1 hashed, and then only the first 5 characters are sent externally. The API response is then checked locally to see if a matching SHA1 hash is present.
 
-Troy Hunt's [blog post](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/) explains this process in more detail.
+Troy Hunt's [blog post](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity) explains this process in more detail.
+
+You can also read [Validating Leaked Passwords with k-Anonymity](https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/) for more information on how secure this is and why.
 
 If you like this gem please donate to Troy's [donations page](https://haveibeenpwned.com/Donate)
 
