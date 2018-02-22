@@ -1,8 +1,18 @@
 # PwnedPasswordsV2
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pwned_passwords_v2`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is a simple wrapper to Troy Hunt's https://api.pwnedpasswords.com service to check if a password has been found in a data breach.
 
-TODO: Delete this and the text above, and describe your gem
+See https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/ for more details.
+
+## Note
+
+The code is kept deliberately simple so you can eyeball what is going on.
+
+The passwords you use in this gem do not get sent externally. The password is sha1 hashed, and then only the first 5 characters are sent externally.
+
+Troy Hunt's [blog post](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/) explains this process in more detail.
+
+If you like this gem please donate to Troy's [donations page](https://haveibeenpwned.com/Donate)
 
 ## Installation
 
@@ -22,7 +32,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    You can find out the number of times a password has appeared in Troy Hunt's Pwned Passwords V2 dataset as follows.
+
+``` >  PwnedPasswordsV2.have_i?('password')
+    => 3303003
+    >  PwnedPasswordsV2.have_i?('a_nice_strong_password+%^&*()__*')
+    => 0
+```
+
+2.0.0-p643 :007 >
 
 ## Development
 
@@ -32,8 +50,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pwned_passwords_v2.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/dansingerman/pwned_passwords_v2.
 
 ## License
 
